@@ -1,0 +1,460 @@
+@font-face {
+    font-family: 'Cereal';
+    src: url('../fonts/Cereal/airbnbcereal_w_lt.woff2') format('woff2'),
+         url('../fonts/Cereal/airbnbcereal_w_lt.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cereal';
+    src: url('../fonts/Cereal/airbnbcereal_w_md.woff2') format('woff2'),
+         url('../fonts/Cereal/airbnbcereal_w_md.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Cereal';
+    src: url('../fonts/Cereal/airbnbcereal_w_xbd.woff2') format('woff2'),
+         url('../fonts/Cereal/airbnbcereal_w_xbd.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body{
+  font-family: Cereal;
+  background-image: url(../images/bg.png);
+  background-size: cover;
+}
+
+.hidden{
+  display: none;
+}
+
+.menu{
+	padding: 0 20px;
+	display: flex;
+	width: 900px;
+	justify-content: space-around;
+	align-items: center;
+	margin: auto;
+	margin-top: 50px;
+	background-color: lightgrey;
+	border-bottom: 1px solid #eee;
+	box-sizing: padding-box;
+	height: 50px;
+  -webkit-box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.3); 
+  box-shadow: 0px 0px 25px 10px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.menu-link{
+	display: flex;
+	list-style: none;
+	border-bottom: solid 1px;
+	padding: 10px;
+	align-items: center;
+	justify-content: space-around;
+	cursor: pointer;
+	box-sizing: border-box;
+	height: 50px;
+}
+
+.icon{
+	width: 25px;
+	height: 25px;
+	margin: 0 10px;
+}
+.active{
+	border-bottom: solid 5px #3671b3;
+	font-weight: bold;
+}
+
+.infos,.trajets,.propositions{
+	width: 900px;
+	margin: auto;
+	padding: 20px 20px;
+  display: flex;
+  background: white;
+  -webkit-box-shadow: 0px 14px 25px 10px rgba(0,0,0,0.3); 
+  box-shadow: 0px 14px 25px 10px rgba(0,0,0,0.3);
+}
+
+.trajets,.propositions{
+  flex-wrap: wrap;
+}
+
+.infos-main{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  align-items: center;
+  padding-right: 10px;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 10px 10px 0 0;
+}
+
+.infos-secondary{
+  width: 100%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group{
+  margin: auto;
+}
+
+.upper{
+  background: white;
+}
+
+.PhotoDeProfil{
+	width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.infos-main span{
+  margin: 10px 0 0 0;
+}
+
+textarea{
+  font-family: cereal;
+  padding: 10px;
+  resize: none;
+  outline: none;
+}
+
+.mdpChange{
+  margin-left: 150px;
+  font-size: 12px;
+  color: #3671B3;
+  width: 165px;
+}
+
+.modifyData{
+  border : none;
+  background: #3f82e4;
+  color: white;
+  border-radius: 250px;
+  padding: 10px 0;
+}
+
+/* Profile Picture CSS */
+.PhotoDeProfil:hover .ppform {
+  opacity: 1;
+}
+
+.PhotoDeProfil:hover .profile-picture {
+  opacity: .5;
+}
+
+.BigPP {
+  object-fit: cover;
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+  border-radius: 50%;
+}
+
+.ppform {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.fas {
+  font-size: 20px;
+}
+
+.PPbutton {
+  text-transform: uppercase;
+  font-size: 20px;
+  width: 50%;
+  margin: 0%;
+  text-align: center;
+}
+.camera{
+  width: 50px;
+  height:45px
+}
+.btn{
+  margin-top:5%;
+  background-color: var(--darkred);
+}
+
+.inputUpper{
+  border : black 1px solid;
+}
+
+.form-item{
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+/* Item CSS */
+.item{
+  width: 40vw;
+  height: 200px;
+  border-radius: 20px;
+  background: white;
+  margin: 20px auto 40px auto;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4); 
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.4);
+  transition: -webkit-box-shadow 1s;
+  position: relative;
+}
+
+.item:hover{
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4); 
+  box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.4);
+}
+
+.item .arrow-icon{
+  width: 30px;
+}
+
+.data-group{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 10px;
+  position: relative;
+  top: -30px;
+}
+
+.item::before{
+  content: '';
+  display: block;
+  background-color: #3671B3;
+  width: 3px;
+  height: 33px;
+  position: relative;
+  top: 30px;
+  left: 83.5px;
+}
+
+.horaire{
+  min-width: 50px;
+  font-weight: 300;
+  margin-right: 30px;
+}
+
+.horaire2{
+  min-width: 50px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.place{
+  font-weight: 600;
+  font-size: 20px;
+  width: 50vw;
+}
+
+.place2{
+  font-weight: 600;
+  font-size: 20px;
+  width: 50vw;
+}
+
+.adresse{
+  font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.place::before{
+  content: '';
+  background-color: #3671B3;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  top: -2px;
+  left: -10px;
+}
+
+.date{
+  text-align: right;
+  margin-right: 20px;
+  width: 200px;
+}
+
+.price{
+  color: black;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: right;
+  width: 100%;
+  margin-right: 20px;
+}
+
+.account-info{
+  width: 93%;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-top: 10px;
+  position: absolute;
+  left: -20px;
+  bottom: 20px;
+}
+
+.profile-info{
+  width: 20vw;
+  margin-left: 3%;
+}
+
+.account-info img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.account-info .name{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.available{
+  font-size: 14px;
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+.account-info .book{
+  background-color: #00e640;
+  text-decoration: none;
+  color: white;
+  text-align: right;
+  padding: 10px;
+  margin-left:10px ;
+  border-radius: 500px;
+  font-weight: 700;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.account-info .book2{
+  background-color: #D2042D;
+  text-decoration: none;
+  color: white;
+  text-align: right;
+  margin-left:10px ;
+  padding: 10px;
+  border-radius: 500px;
+  font-weight: 700;
+  -webkit-transition: all 0.5s ease-in-out;
+}
+
+.book:hover{
+  color: var(--navy);
+  background-color: white;
+}
+
+.book2:hover{
+  color: var(--navy);
+  background-color: white;
+}
+
+.book-container{
+  width: 100%;
+  text-align: right;
+}
+
+.book2-container{
+  width: 100%;
+  text-align: right;
+}
+
+.modifyTrajet{
+  height: 30px;
+  border-radius: 500px;
+  border: none;
+  padding: 10 0px;
+  background-color: #ffe505;
+  color: white;
+  margin-right: 5px;
+}
+
+.deleteTrajet{
+  height: 30px;
+  border-radius: 500px;
+  border: none;
+  padding: 10 0px;
+  background-color: #ff0000;
+  color: white;
+}
+
+.demandeRecue{
+  width: 400px;
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  align-items: center;
+  padding: 5px;
+}
+
+.demandeRecue .profile-picture{
+  min-width: 50px;
+  height: 50px;
+  border-radius: 500px;
+  object-fit: cover;
+}
+
+.demandeRecue .infos-profil{
+  margin-left: 10px;
+  width: 150px;
+  white-space: nowrap;
+}
+
+.infos-profil span{
+  font-size: 18px;
+}
+
+.infos-profil p{
+  font-size: 10px;
+  font-weight: lighter;
+}
+
+.select{
+  width: 100%;
+}
+.select img{
+  height: 30px;
+  width: 30px;
+  float: right;
+  margin: 5px;
+}
+
+.deleteAccount{
+  background-color: red;
+  color: white;
+  border-radius: 500px;
+  padding: 0 10px;
+  width: 150px;
+  text-align: center;
+  font-size: 13px;
+  cursor: pointer;
+}
